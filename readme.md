@@ -1,20 +1,22 @@
-
-![btc-calculator](https://raw.github.com/mjhea0/thinkful-angular/master/btc-calc.png)
-
-
 # AngularJS by Example - Building a Bitcoin Investment Calculator
 
-Angular is a powerful MV* framwework, designed for model Single Page Applications (aslo know as SPAs.). This post serves as a crash course, learning by doing, introduction to the framework. 
+Angular JS is a powerful Javascript MVC framework created by Google to build maintenable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
 
-## Intro
+First, to fully undestand this tutorial you need to be comfortable with vanilla Javascript. 
 
-What we're building ..
+> For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
+
+The application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcouints. Through this tutorial, we'll walk you through the basics of designing a web app using Angular whil also highlighting the key features of the framework. 
+
+Here's a sneak peak of what we're building:
+
+![btc-calculator](https://raw.github.com/mjhea0/thinkful-angular/master/btc-calc.png)
 
 ## Philosopy
 
 The AngularJS philosophy
 
-1. Data First: update data, then DOM (not other way around like jQuery) / declcarative not imperative
+1. Data First: update data, then DOM (not other way around like jQuery) / declcarative not imperative / no longer haning to maintain the DOM!
 2. Extending HTML: embraces HTML, making it easy for new developers to learn the "Angular-way"
 3. Simple, yet scaleable: start simple, but you can create very, very complex, scalable apps 
 4. Testable: designed for end to end testing, design paradigms force you to break app into tiny testable pieces
