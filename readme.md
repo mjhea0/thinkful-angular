@@ -1,5 +1,5 @@
 
-![btc-calculator](https://raw.github.com/mjhea0/thinkful-angular/master/btc-calc.png]
+![btc-calculator](https://raw.github.com/mjhea0/thinkful-angular/master/btc-calc.png)
 
 
 # AngularJS by Example - Building a Bitcoin Investment Calculator
