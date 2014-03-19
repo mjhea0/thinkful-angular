@@ -16,9 +16,22 @@
       table {
         background-color: white;
         color: black;
+        border-color: black;
       }
-      body {
-        font-size: 20px;
+      body, label, th {
+        font-size: 16px;
+      }
+      .lead {
+        font-style: italic;
+      }
+      .small-font {
+        font-size: 13px;
+      }
+      .table>thead>tr>th, .table>thead>tr>th, table>tbody>tr>th, .table>tbody>tr>th, table>tfoot>tr>th, .table>tfoot>tr>th, table>thead>tr>td, .table>thead>tr>td, table>tbody>tr>td, .table>tbody>tr>td, table>tfoot>tr>td, .table>tfoot>tr>td {
+        border-color: black;
+      }
+      img {
+        padding:10px;
       }
     </style>
   </head>
@@ -33,37 +46,31 @@
     <div class="row">
       <div class="col-sm-12">
         
-        <form class="form-horizontal" role="form">
-          <div class="row">
-            <br>
-            <br>
-            <div class="col-sm-3">
-              <label for="starting-investment">Starting Investment (USD)</label>
-            </div>
-            <div class="col-sm-9">
-              <input type="number" ng-model="startAmt" class="form-control" placeholder="{{startAmt}}">
-            </div>
-          </div>
-        </form>
-
-        <form class="form-horizontal" role="form">
-          <div class="row">
-            <div class="col-sm-3">
-              <label for="current-price">Current Price of 1 Bitcoin (USD)</label>
-            </div>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" value="{{currBTC | currency}}" disabled>
-            </div>
-          </div>
-        </form>
-        <br>
         <div class="row">
           <div class="col-sm-7">
+            <form role="form">
+              <br><br>
+              <label for="starting-investment">Intial Investment (USD)</label>
+              <input type="number" ng-model="startAmt" class="form-control" placeholder="{{startAmt}}">
+            </form>
+            <br>
+            <form role="form">
+              <label for="current-price">Current Price of 1 Bitcoin (USD)</label>
+              <input type="text" class="form-control" value="{{currBTC | currency}}" disabled>
+            </form>
+          </div>
+          <div class="col-sm-5">
+            <img src="img/btc.png" width="200">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-7">
+            <br><br>
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th>If the Price of 1 BTC Reaches</th>
-                  <th>Starting Investment will Become</th>
+                  <th>Price of 1 BTC</th>
+                  <th>Starting Investment</th>
                   <th>Profit</th>
                 </tr>
               </thead>
@@ -75,12 +82,13 @@
                 </tr>
               </tbody>
             </table>
+            <span class="small-font">* IF the price of 1 BTC reaches X, THEN your starting investment becomes X AND your profit is...</span>
         </div>
         <div class="col-sm-5">
           <br>
           <br>
           <br>
-          GRAPH HERE D3
+          <h2>D3 GRAPH HERE</h2>
         </div>
       </div>  
       </div>

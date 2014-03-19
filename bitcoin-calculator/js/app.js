@@ -1,7 +1,5 @@
 angular.module('bitcalc',[])
 
-
-//add $locale
 .controller('btcRates', function($scope, $http){
    
    $http.get("https://bitpay.com/api/rates")
@@ -12,7 +10,7 @@ angular.module('bitcalc',[])
     	       $scope.currBTC = data[i].rate;
        }
    }
-   $scope.startAmt = 5;
+   $scope.startAmt = 5000;
    $scope.newAmt = function(price){
    	                return price/$scope.currBTC * $scope.startAmt;
    }
