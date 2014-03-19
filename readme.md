@@ -2,9 +2,9 @@
 ![btc-calculator](https://raw.github.com/mjhea0/thinkful-angular/master/btc-calc.png)
 
 http://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/
-https://github.com/oojr/bitcoin-calc
 
-# AngularJS by Example - Building a Bitcoin Currency Convertor
+
+# AngularJS by Example - Building a Bitcoin Investment Calculator
 
 ## Intro
 
