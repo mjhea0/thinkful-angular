@@ -2,9 +2,7 @@
 
 Angular JS is a powerful Javascript MVC framework created by Google to build maintenable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
 
-First, to fully undestand this tutorial you need to be comfortable with vanilla Javascript. 
-
-> For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
+> First, before going any further, to fully undestand this tutorial you need to be comfortable with *vanilla* Javascript, not just jQuery. For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
 
 The application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcouints. Through this tutorial, we'll walk you through the basics of designing a web app using Angular whil also highlighting the key features of the framework. 
 
