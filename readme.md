@@ -12,27 +12,15 @@ Here's a sneak peak of what we're building:
 
 ## What is Angular?
 
-One of my favorite quotes about MVC in terms of MV* frameworks comes from an angular book:
+Originally developed in 2009 by two Google employees, Angular is well suited for creating dynamic, single page applications (SPAs) within the familiar Model View Controller (MVC) paradigm:
 
-*In Angular applications, the view is the Document Object Model (DOM), the controllers
-are JavaScript classes, and the model data is stored in object properties.
+*In Angular applications, the view is the Document Object Model (DOM), the controllers are JavaScript classes, and the model data is stored in object properties.
 
-We think MVC is neat for several reasons. First, it gives you a mental model for where
-to put what, so you don’t have to invent it every time. Other folks collaborating on your
-project will have an instant leg up on understanding what you’ve written, as they’ll know
-you’re using MVC structure to organize your code. Perhaps most importantly, we’ll
-claim that it delivers great benefits in making your app easier to extend, maintain, and
-test.*
+We think MVC is neat for several reasons. First, it gives you a mental model for where to put what, so you don’t have to invent it every time. Other folks collaborating on your project will have an instant leg up on understanding what you’ve written, as they’ll know you’re using MVC structure to organize your code. Perhaps most importantly, we’ll claim that it delivers great benefits in making your app easier to extend, maintain, and test.* 
 
-## Philosophy
+Working within that paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Say goodbye to jQuery.
 
-The AngularJS philosophy
-
-1. Data First: update data, then DOM (not other way around like jQuery) / declarative not imperative / no longer having to maintain the DOM!
-2. Extending HTML: embraces HTML, making it easy for new developers to learn the "Angular-way"
-3. Simple, yet scaleable: start simple, but you can create very, very complex, scalable apps 
-4. Testable: designed for end to end testing, design paradigms force you to break app into tiny testable pieces
-
+Angular is also very easy to learn since it works directly with HTML, simply extending its functionality.
 
 ## Features
 
