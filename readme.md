@@ -1,14 +1,28 @@
 # AngularJS by Example - Building a Bitcoin Investment Calculator
 
-Angular JS is a powerful Javascript MVC framework created by Google to build maintainable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
+Angular JS is a powerful Javascript framework created by Google to build maintainable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
 
 > First, before going any further, to fully understand this tutorial you need to be comfortable with *vanilla* Javascript, not just jQuery. For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
 
-The application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting the key features of the framework. 
+The application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, data-binding, and routing. 
 
 Here's a sneak peak of what we're building:
 
 ![btc-calculator](https://raw.github.com/mjhea0/thinkful-angular/master/btc-calc.png)
+
+## What is Angular?
+
+One of my favorite quotes about MVC in terms of MV* frameworks comes from an angular book:
+
+*In Angular applications, the view is the Document Object Model (DOM), the controllers
+are JavaScript classes, and the model data is stored in object properties.
+
+We think MVC is neat for several reasons. First, it gives you a mental model for where
+to put what, so you don’t have to invent it every time. Other folks collaborating on your
+project will have an instant leg up on understanding what you’ve written, as they’ll know
+you’re using MVC structure to organize your code. Perhaps most importantly, we’ll
+claim that it delivers great benefits in making your app easier to extend, maintain, and
+test.*
 
 ## Philosophy
 
@@ -20,11 +34,14 @@ The AngularJS philosophy
 4. Testable: designed for end to end testing, design paradigms force you to break app into tiny testable pieces
 
 
-## Building Blocks / Terminology
+## Features
 
-1. MVC - quote from angular book
-2. Services
-3. Directives
+Templates : Templates reside right in the DOM. No more Handlebars! 
+Two-way data-binding : Changes in your JS automatically update the DOM - and vice versa.
+Routing : Easily associate controllers with temapltes
+Directives : Encapsulates templates and code in reusable components easily.
+Testability : AngularJS was designed in a way your web app can be fully testable.
+Animation : Easily animate elements and views.
 
 ## App Time
 
@@ -48,3 +65,5 @@ Whenever an input changes so does the variable, instantly.
 
 ### Other things to look at
 ### Stretch Goals
+
+D3 Directive!
