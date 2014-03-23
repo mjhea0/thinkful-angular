@@ -384,6 +384,131 @@ As you probably guessed, the [currency](http://docs.angularjs.org/api/ng/filter/
 
 ### Model
 
-<input type="number" ng-model="startAmt" class="form-control" placeholder="{{startAmt}}">
+```html
+<input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
+```
+
+Remember how [models](http://docs.angularjs.org/api/ng/directive/ngModel) work? Here we are binding a model called `InitialAmt` the input form. This is a perfect example of two-way binding:
+
+1. If we update the model, we update the view with `placeholder="{{initalAmt}}"`
+2. We can also update the view (by entering a new value in the input box), so that it updates the model, making our app dynamic
+
+Test it out!
+
+### Update HTML
+
+Finally, update the styles and HTML structure:
+
+```html
+<!DOCTYPE html>
+<!-- controller logic -->
+<html ng-app="btcCalc" ng-controller="btcCtrl">
+  <head>
+    <title>Bitcoin Investment Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <style>
+      .number {font-weight: bold;}
+      label, table {font-size: 15px;}
+      input {max-width: 200px;}
+    </style>
+<!-- angular module -->
+<script type="text/javascript">
+  var btcCalc = angular.module('btcCalc', []);
+    btcCalc.controller('btcCtrl', function($scope, $http){
+      $http.get("https://bitpay.com/api/rates")
+      .success(function(data){
+        $scope.rates = data;
+        for(var i=0;i<data.length;i++){
+          if (data[i].code == "USD"){
+            $scope.currRate = data[i].rate;
+          }
+        }
+        $scope.initalAmt  = 5000;
+        $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initalAmt;}
+        $scope.profit     = function(price){return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;} 
+      });
+    });
+</script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Bitcoin Investment Calculator</h1>
+          <br><br>
+          <form role="form">
+            <label for="starting-investment">Intial Investment (USD)</label>
+            <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
+          </form>
+          <br>
+          <p>Current Price (USD): <span class="number">{{currRate | currency }}</span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-7">
+          <br><br>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Price of 1 BTC</th>
+                <th>Starting Investment</th>
+                <th>Profit</th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr>
+                  <td>$1,000</td>
+                  <td>{{ newAmt(1000) | currency }}</td>
+                  <td>{{ profit(1000) | currency }}</td> 
+                </tr>
+                <tr>
+                  <td>$5,000</td>
+                  <td>{{ newAmt(5000) | currency }}</td>
+                  <td>{{ profit(5000) | currency }}</td> 
+                </tr>
+                <tr>
+                  <td>$10,000</td>
+                  <td>{{ newAmt(10000) | currency }}</td>
+                  <td>{{ profit(10000) | currency }}</td> 
+                </tr>
+                <tr>
+                  <td>$25,000</td>
+                  <td>{{ newAmt(25000) | currency }}</td>
+                  <td>{{ profit(25000) | currency }}</td> 
+                </tr>
+                <tr>
+                  <td>$50,000</td>
+                  <td>{{ newAmt(50000) | currency }}</td>
+                  <td>{{ profit(50000) | currency }}</td> 
+                </tr>
+              </tbody>
+          </table>
+          <span>* IF the price of 1 Bitcoin reaches X, THEN your starting investment becomes X AND your profit becomes X.</span>
+        </div>
+        <div class="col-sm-5">
+          <br><br>
+          <img src="img/btc.png" width="200">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+```
+
+Your final app should now look like this:
+
+## Conclusion
+
+Coming soon ...
+
+
+
 
 

@@ -13,6 +13,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
     <style>
       .number {font-weight: bold;}
+      label, table {font-size: 15px;}
+      input {max-width: 200px;}
     </style>
 <!-- angular module -->
 <script type="text/javascript">
@@ -37,14 +39,14 @@
     <div class="jumbotron">
       <div class="row">
         <div class="col-sm-12">
-          <h1>Bitcoin Investment<br>Calculator</h1>
+          <h1>Bitcoin Investment Calculator</h1>
           <br><br>
           <form role="form">
             <label for="starting-investment">Intial Investment (USD)</label>
             <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
           </form>
           <br>
-          <p>Current Price (USD): {{currRate | currency }}</p>
+          <p>Current Price (USD): <span class="number">{{currRate | currency }}</span></p>
         </div>
       </div>
       <div class="row">
@@ -86,8 +88,10 @@
                 </tr>
               </tbody>
           </table>
+          <span>* IF the price of 1 Bitcoin reaches X, THEN your starting investment becomes X AND your profit becomes X.</span>
         </div>
         <div class="col-sm-5">
+          <br><br>
           <img src="img/btc.png" width="200">
         </div>
       </div>
