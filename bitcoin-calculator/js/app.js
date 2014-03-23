@@ -1,26 +1,20 @@
 angular.module('bitcalc',[])
 
 .controller('btcRates', function($scope, $http){
-   
-   $http.get("https://bitpay.com/api/rates")
-       .success(function(data){
-       	$scope.rates = data;
-       	for(var i=0;i<data.length;i++){
-    	    if (data[i].code == "USD"){
-    	       $scope.currBTC = data[i].rate;
-       }
-   }
-   $scope.startAmt = 5000;
-   $scope.newAmt = function(price){
-   	                return price/$scope.currBTC * $scope.startAmt;
-   }
-   $scope.profit = function(price){
-   	                return price/$scope.currBTC * $scope.startAmt - $scope.startAmt; 
-   $scope.percent = function(price){
-   	                 return (price - $scope.currBTC)/$scope.currBTC;
-   }
 
-   }
+  $http.get("https://bitpay.com/api/rates")
+  .success(function(data){
+    $scope.rates = data;
+    for(var i=0;i<data.length;i++){
+      if (data[i].code == "USD"){
+        $scope.currBTC = data[i].rate;
+      }
+    } 
+
+    $scope.initalAmt  = 5000;
+    $scope.newAmt     = function(price){return price/$scope.currBTC * $scope.initalAmt;}
+    $scope.profit     = function(price){return price/$scope.currBTC * $scope.initalAmt - $scope.initalAmt;} 
+    $scope.percent    = function(price){return (price - $scope.currBTC)/$scope.currBTC;}
 });
               
 

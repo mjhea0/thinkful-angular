@@ -183,6 +183,7 @@ Before moving on with more Angular, let's step back and look at the functionalit
     <style>
       .number {font-weight: bold;}
     </style>
+    <!-- angular module -->
     <script type="text/javascript">
       var btcCalc = angular.module('btcCalc', []);
         btcCalc.controller('btcCtrl', ['$scope', function ($scope) {
@@ -236,5 +237,81 @@ Check it out in your browser. It should look like this:
 ![angular-2](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-2.png)
 
 Nothing too exciting happening; just another input box and a table, along with more Bootstrap styles. You can grab the Bitcoin image [here](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/btc-calculator/img/btc.png).
+
+### Update Module and Controller
+
+Next, update our module and controller.
+
+```html
+<!-- angular module -->
+<script type="text/javascript">
+  var btcCalc = angular.module('btcCalc', []);
+    btcCalc.controller('btcCtrl', function($scope, $http){
+      $http.get("https://bitpay.com/api/rates")
+      .success(function(data){
+        $scope.rates = data;
+        for(var i=0;i<data.length;i++){
+          if (data[i].code == "USD"){
+            $scope.currRate = data[i].rate;
+          }
+        }
+      });
+    });
+</script>
+
+Without going into too much detail, because I assume you are comfortable with Javascript, we are grabbing data from the [BitPay API](https://bitpay.com/api/rates), the grabbing the current value of a Bitcouin in USD. We assign this value to the variable `currRate`.
+
+Let's add this to the DOM:
+
+```html
+<p>Current Price (USD): ${{currRate}}</p>
+```
+
+Now, do some basic calculations in the module:
+
+```html
+<!-- angular module -->
+<script type="text/javascript">
+  var btcCalc = angular.module('btcCalc', []);
+    btcCalc.controller('btcCtrl', function($scope, $http){
+      $http.get("https://bitpay.com/api/rates")
+      .success(function(data){
+        $scope.rates = data;
+        for(var i=0;i<data.length;i++){
+          if (data[i].code == "USD"){
+            $scope.currRate = data[i].rate;
+          }
+        }
+        $scope.initalAmt  = 5000;
+        $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initalAmt;}
+        $scope.profit     = function(price){return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;} 
+      });
+    });
+</script>
+```
+
+I'll let you evaluate those calculations. Notice how we have to pass a price into the function.
+
+Next, go ahead and append them to the DOM: 
+
+```html
+<tbody>
+  <tr>
+    <td>1000</td>
+    <td>{{ newAmt(1000) }}</td>
+    <td>{{ profit(1000) }}</td> 
+  </tr>
+</tbody>
+```
+
+Check this out in the browser. Depending upon the current price of 1 Bitcoint, you should see:
+
+![angular-3](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-3.png)
+
+For clarity, if we look at the first calcuation, `newAmt`, let's plug in the values:
+
+$scope.newAmt = function(1000){return 1000/$scope.currRate * $scope.initalAmt;}
+
+
 
 
