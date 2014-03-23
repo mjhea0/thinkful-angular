@@ -112,8 +112,8 @@ Run this in your browser. You should see this:
 
 ![angular-1](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-1.png)
 
-Play around with code use here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.net/mjhea0/9ear3/)
+Play around with code here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.net/mjhea0/9ear3/)
 
-Now, let's move on and create a more robust app.
+With the basics out of the, let's move on and create a more robust app.
 
 ## Bitcoin Calculator
