@@ -122,6 +122,8 @@ With the basics out of the way, let's move on and create a more robust app.
 
 ## Bitcoin Calculator
 
+### Module and Controller
+
 First, let's add in a *controller* and name our Angular app:
 
 ```html
@@ -158,5 +160,81 @@ Try your application now in the browser. It should now work.
 
 > You do not have to define a module as a function for your app to work, but it is a best practice.
 
+### Update HTML
+
+Before moving on with more Angular, let's step back and look at the functionality of our final app: *The application we'll be developing is a Bitcoin investment calculator that details how much you could potentially profit if you invested X amount of dollars in Bitcoins.*
+
+*What does that mean in terms of HTML structure?* Well, we need an input box for the intial investment and a table that shows IF the price of 1 BTC reaches X, THEN your starting investment would be X AND your profit is X. Let's create the HTML for that now. 
+
+```html
+<!DOCTYPE html>
+<!-- controller logic -->
+<html ng-app="btcCalc" ng-controller="btcCtrl">
+  <head>
+    <title>Bitcoin Investment Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <style>
+      .number {font-weight: bold;}
+    </style>
+    <script type="text/javascript">
+      var btcCalc = angular.module('btcCalc', []);
+        btcCalc.controller('btcCtrl', ['$scope', function ($scope) {
+          $scope.somenumber = 0;
+        }]);
+    </script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Bitcoin Investment<br>Calculator</h1>
+          <br><br>
+          <form role="form">
+            <label for="starting-investment">Intial Investment (USD)</label>
+            <input type="number" class="form-control">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-7">
+          <br><br>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Price of 1 BTC</th>
+                <th>Starting Investment</th>
+                <th>Profit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>price</td>
+                <td>new amt</td>
+                <td>new profit</td> 
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-5">
+          <img src="img/btc.png" width="200">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+```
+
+Check it out in your browser. It should look like this:
+
+![angular-2](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-2.png)
+
+Nothing too exciting happening; just another input box and a table, along with more Bootstrap styles. You can grab the Bitcoin image [here](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/btc-calculator/img/btc.png).
 
 
