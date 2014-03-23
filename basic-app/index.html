@@ -23,41 +23,13 @@
   </head>
   <body>
     <div class="jumbotron">
-      <div class="row">
-        <div class="col-sm-12">
-          <h1>Bitcoin Investment<br>Calculator</h1>
-          <br><br>
-          <form role="form">
-            <label for="starting-investment">Intial Investment (USD)</label>
-            <input type="number" class="form-control">
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-7">
-          <br><br>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Price of 1 BTC</th>
-                <th>Starting Investment</th>
-                <th>Profit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>price</td>
-                <td>new amt</td>
-                <td>new profit</td> 
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-sm-5">
-          <img src="img/btc.png" width="200">
-        </div>
-      </div>
+      <h1>Bitcoin Investment<br>Calculator</h1>
+      <br>
+      <h3>How many Bitcoins do you have?</h3>
+      <!-- model -->
+      <input type="number" ng-model="somenumber" placeholder="20">
+      <br><br>
+      <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
     </div>
   </body>
 </html>
-

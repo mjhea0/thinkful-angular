@@ -26,9 +26,9 @@ Before we start building, take a minute to read over some of Angular's main feat
 4. Directives: Encapsulates templates and code for easy reuse.
 5. Testability: AngularJS was designed in a way your web app can be fully testable.
 
-## Project Setup
+## Basic Project
 
-Let's start with the very basics, starting with a basic HTML5 project boilerplate:
+Let's start with the very basics, starting with a bare HTML5 project boilerplate:
 
 ```html
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ Let's start with the very basics, starting with a basic HTML5 project boilerplat
   </body>
 </html>
 ```
-See this [link](https://github.com/mjhea0/thinkful-html#html) if you'd like to know more info about this structure.
+See this [link](https://github.com/mjhea0/thinkful-html#html) if you'd like to know more info about this structure. Notice how I included Angular in the page - `<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>`. You must do this before the closing `<body>` tag.
 
 Next, we'll dive right into Angular, first let's define a *scope* for our project:
 
@@ -114,8 +114,49 @@ Run this in your browser. You should see this:
 
 ![angular-1](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-1.png)
 
+Watch what happens when you change the value in the input box. Two-way binding in action!
+
 Play around with code here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.net/mjhea0/9ear3/)
 
-With the basics out of the, let's move on and create a more robust app.
+With the basics out of the way, let's move on and create a more robust app.
 
 ## Bitcoin Calculator
+
+First, let's add in a *controller* and name our Angular app:
+
+```html
+<!-- controller logic -->
+<html ng-app="btcCalc" ng-controller="btcCtrl">
+```
+
+[Controllers](http://docs.angularjs.org/api/ng/directive/ngController) are simply used to control, or talk to, the view.
+
+If you try the app now, you'll notice it's broken. That's because we defined a controller, but we have not defined how said contoller works. Let's do that.
+
+Add an Angular module:
+
+```html
+<!-- angular module -->
+<script type="text/javascript">
+  var btcCalc = angular.module('btcCalc', []);
+    btcCalc.controller('btcCtrl', ['$scope', function ($scope) {
+      $scope.somenumber = 0;
+    }]);
+</script>
+```
+
+Angular [modules](http://docs.angularjs.org/guide/module) are used for organizing Javascript apps into seperate self-contained components.
+
+1. `angular.module("name",[])` instantiates and returns a new module
+2. `function ($scope) {$scope.somenumber = 0;}` binds the contoller with the view
+
+When Angular intitalizes this controller, it creates and injects the `$scope` object into the function with [dependency injection](http://docs.angularjs.org/guide/di). Don't worry if this doesn't make sense, it's a bit of Angular magic for creating and using the `$scope` object.
+
+In this case, we are simply binding the number 0 to the `somenumber` within the view.
+
+Try your application now in the browser. It should now work.
+
+> You do not have to define a module as a function for your app to work, but it is a best practice.
+
+
+
