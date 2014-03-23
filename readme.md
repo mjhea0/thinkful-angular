@@ -19,7 +19,7 @@ Angular is also very easy to learn since it works directly with HTML, simply ext
 Before we start building, take a minute to read over some of Angular's main features:
 
 1. Templates: Templates reside right in the DOM. No more Handlebars! 
-2. Two-way data-binding: Changes in your JS automatically update the DOM - and vice versa.
+2. Two-way data-binding: Changes in your Javascript automatically update the DOM - and vice versa.
 3. Routing: Easily associate controllers with temapltes
 4. Directives: Encapsulates templates and code for easy reuse.
 5. Testability: AngularJS was designed in a way your web app can be fully testable.
@@ -70,6 +70,10 @@ Finally, let's add in the *model* and get our app working:
 <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
 ```
 
+Here we are defining the directive [`ng-model`](http://docs.angularjs.org/api/ng/directive/ngModel) in the input box as `ng-model="somenumber"`. By doing so, we have bound the value within the input box to the model, so when the input value changes, Angular automatically updates the model. This is [two-way binding](http://docs.angularjs.org/guide/databinding). Get used to this concept as this is part of what makes Angular so poweful - and fun to use.
+
+Next, by wrapping the model value, `somenumber` in double curly braces, we are simply telling Angular to replace that text with the actual value, which, again, comes from the number added to the input box. 
+
 Here's the final code, which includes some Bootstrap styles:
 
 ```html
@@ -106,28 +110,10 @@ Here's the final code, which includes some Bootstrap styles:
 
 Run this in your browser. You should see this:
 
-Play around with code use here: http://jsfiddle.net/viralpatel/ppgsS/
+![angular-1](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-1.png)
 
+Play around with code use here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.net/mjhea0/9ear3/)
 
-### Grabbing Data
+Now, let's move on and create a more robust app.
 
-From bitcoin API
-
-### Bare Essentials / Page Setup
-
-Barebones app/MVC
-
-### Scope
-
-Relationship between scope and the controller / how to divide the page up with multiple scopes
-
-### Binding
-
-Whenever an input changes so does the variable, instantly.
-
-## Conclusion
-
-### Other things to look at
-### Stretch Goals
-
-D3 Directive!
+## Bitcoin Calculator
