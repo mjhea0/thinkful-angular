@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- controller logic -->
+<html ng-app>
+  <head>
+    <title>Bitcoin Investment Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <style>
+      .number {font-weight: bold;}
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Bitcoin Investment<br>Calculator</h1>
+      <br>
+      <h3>How many Bitcoins do you have?</h3>
+      <!-- model -->
+      <input type="number" ng-model="somenumber" placeholder="20">
+      <br><br>
+      <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
+    </div>
+  </body>
+</html>
