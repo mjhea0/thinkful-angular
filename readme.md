@@ -4,7 +4,9 @@ Angular JS is a powerful Javascript framework created by Google for building mai
 
 > First, before going any further, to fully understand this tutorial you need to be comfortable with *vanilla* Javascript, not just jQuery. For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
 
-The application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, data-binding, and routing. 
+Forget the basic hello world and todo applications - let's build something more [fun](link)! 
+
+As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, data-binding, and routing. 
 
 ## What is Angular?
 
