@@ -308,10 +308,82 @@ Check this out in the browser. Depending upon the current price of 1 Bitcoint, y
 
 ![angular-3](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-3.png)
 
-For clarity, if we look at the first calcuation, `newAmt`, let's plug in the values:
+For clarity, if we look at the first calcuation, `newAmt`, let's plug in the values: `$scope.newAmt = function(1000){return 1000/563.64 * 5000;}`. Make sense?
 
-$scope.newAmt = function(1000){return 1000/$scope.currRate * $scope.initalAmt;}
+Add more values into the table:
 
+```html
+<tbody>
+  <tr>
+    <td>$1,000</td>
+    <td>{{ newAmt(1000) }}</td>
+    <td>{{ profit(1000) }}</td> 
+  </tr>
+  <tr>
+    <td>$5,000</td>
+    <td>{{ newAmt(5000) }}</td>
+    <td>{{ profit(5000) }}</td> 
+  </tr>
+  <tr>
+    <td>$10,000</td>
+    <td>{{ newAmt(10000) }}</td>
+    <td>{{ profit(10000) }}</td> 
+  </tr>
+  <tr>
+    <td>$25,000</td>
+    <td>{{ newAmt(25000) }}</td>
+    <td>{{ profit(25000) }}</td> 
+  </tr>
+  <tr>
+    <td>$50,000</td>
+    <td>{{ newAmt(50000) }}</td>
+    <td>{{ profit(50000) }}</td> 
+  </tr>
+</tbody>
+```
 
+Check to make sure that worked before moving on.
+
+### Filters
+
+Angular [Filters](http://docs.angularjs.org/guide/filter) are used in a number of ways, but we are going to use them to simply alter the returned output.
+
+```
+<p>Current Price (USD): {{currRate | currency }}</p>
+
+...
+
+<tr>
+  <td>$1,000</td>
+  <td>{{ newAmt(1000) | currency }}</td>
+  <td>{{ profit(1000) | currency }}</td> 
+</tr>
+<tr>
+  <td>$5,000</td>
+  <td>{{ newAmt(5000) | currency }}</td>
+  <td>{{ profit(5000) | currency }}</td> 
+</tr>
+<tr>
+  <td>$10,000</td>
+  <td>{{ newAmt(10000) | currency }}</td>
+  <td>{{ profit(10000) | currency }}</td> 
+</tr>
+<tr>
+  <td>$25,000</td>
+  <td>{{ newAmt(25000) | currency }}</td>
+  <td>{{ profit(25000) | currency }}</td> 
+</tr>
+<tr>
+  <td>$50,000</td>
+  <td>{{ newAmt(50000) | currency }}</td>
+  <td>{{ profit(50000) | currency }}</td> 
+</tr>
+```
+
+As you probably guessed, the [currency](http://docs.angularjs.org/api/ng/filter/currency) filter formats a number as currency. When used, you can either define a currency, `| currency:"USD$"`, or let Angular decide which to used based on your geolocation, `| currency`.
+
+### Model
+
+<input type="number" ng-model="startAmt" class="form-control" placeholder="{{startAmt}}">
 
 
