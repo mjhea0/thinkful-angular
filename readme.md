@@ -28,7 +28,7 @@ Before we start building, take a minute to read over some of Angular's main feat
 
 ## Basic Project
 
-Let's start with the very basics, starting with a bare HTML5 project boilerplate:
+Let's start with the very basics, with a barebones HTML5 project boilerplate:
 
 ```html
 <!DOCTYPE html>
@@ -116,7 +116,7 @@ Run this in your browser. You should see this:
 
 Watch what happens when you change the value in the input box. Two-way binding in action!
 
-Play around with code here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.net/mjhea0/9ear3/)
+Play around with code here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.net/mjhea0/9ear3/). You can also grab the actual HTML from this [repo](https://github.com/mjhea0/thinkful-angular/tree/master/basic-app).
 
 With the basics out of the way, let's move on and create a more robust app.
 
