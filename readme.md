@@ -262,8 +262,9 @@ Next, update our module and controller.
       });
     });
 </script>
+```
 
-Without going into too much detail, because I assume you are comfortable with Javascript, we are grabbing data from the [BitPay API](https://bitpay.com/api/rates), the grabbing the current value of a Bitcouin in USD. We assign this value to the variable `currRate`.
+Without going into too much detail, because I assume you are comfortable with Javascript, we are grabbing data from the [BitPay API](https://bitpay.com/api/rates), then grabbing the current value of a Bitcoin in USD. We assign this value to the variable `currRate`.
 
 Let's add this to the DOM:
 
