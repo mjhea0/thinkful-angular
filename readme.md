@@ -158,11 +158,11 @@ Angular [modules](http://docs.angularjs.org/guide/module) are used for organizin
 
 When Angular intitalizes this controller, it creates and injects the `$scope` object into the function with [dependency injection](http://docs.angularjs.org/guide/di). Don't worry if this doesn't make sense, it's a bit of Angular magic for creating and using the `$scope` object.
 
-In this case, we are simply binding the number 0 to the `somenumber` within the view.
+In this case, we are simply binding the number 0 to `somenumber` within the view.
 
 Try your application now in the browser. It should now work.
 
-> You do not have to define a module as a function for your app to work, but it is a best practice.
+> You do not have to assign a variable to a module for your app to work, but it is a best practice.
 
 ### Update HTML
 
