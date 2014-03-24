@@ -393,10 +393,12 @@ As you probably guessed, the [currency](http://docs.angularjs.org/api/ng/filter/
 <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
 ```
 
-Remember how [models](http://docs.angularjs.org/api/ng/directive/ngModel) work? Here we are binding a model called `InitialAmt` the input form. This is a perfect example of two-way binding:
+Remember how [models](http://docs.angularjs.org/api/ng/directive/ngModel) work? Here we are binding a model called `InitialAmt` to the input form. This is a perfect example of two-way binding:
 
-1. If we update the model, we update the view with `placeholder="{{initalAmt}}"`
-2. We can also update the view (by entering a new value in the input box), so that it updates the model, making our app dynamic
+1. If we update the model, we update the view with `placeholder="{{initalAmt}}"`.
+2. We can also update the view (by entering a new value in the input box), so that it updates the model, making our app dynamic.
+
+It's circular: edit the model, and it updates the view; edit the view and it updates the model!
 
 Test it out!
 
