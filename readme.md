@@ -74,7 +74,7 @@ Finally, let's add in the *model* and get our app working:
 <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
 ```
 
-Here we are defining the directive [`ng-model`](http://docs.angularjs.org/api/ng/directive/ngModel) in the input box as `ng-model="somenumber"`. By doing so, we have bound the value within the input box to the model, so when the input value changes, Angular automatically updates the model. This is [two-way binding](http://docs.angularjs.org/guide/databinding). Get used to this concept as this is part of what makes Angular so poweful - and fun to use.
+Here we are defining the directive [`ng-model`](http://docs.angularjs.org/api/ng/directive/ngModel) in the input box as `ng-model="somenumber"`. By doing so, we have bound the value within the input box to the model, so when the input value changes, Angular automatically updates the model. This is [two-way binding](http://docs.angularjs.org/guide/databinding). Get used to this concept as this is part of what makes Angular so powerful - and fun to use.
 
 Next, by wrapping the model value, `somenumber` in double curly braces, we are simply telling Angular to replace that text with the actual value, which, again, comes from the number added to the input box. 
 
@@ -137,7 +137,7 @@ First, let's add in a *controller* and name our Angular app:
 
 [Controllers](http://docs.angularjs.org/api/ng/directive/ngController) are simply used to control, or talk to, the view.
 
-If you try the app now, you'll notice it's broken. That's because we defined a controller, but we have not defined how said contoller works. Let's do that.
+If you try the app now, you'll notice it's broken. That's because we defined a controller, but we have not defined how said controller works. Let's do that.
 
 Add an Angular module:
 
@@ -151,12 +151,12 @@ Add an Angular module:
 </script>
 ```
 
-Angular [modules](http://docs.angularjs.org/guide/module) are used for organizing Javascript apps into seperate self-contained components.
+Angular [modules](http://docs.angularjs.org/guide/module) are used for organizing Javascript apps into separate self-contained components.
 
 1. `angular.module("name",[])` instantiates and returns a new module
-2. `function ($scope) {$scope.somenumber = 0;}` binds the contoller with the view
+2. `function ($scope) {$scope.somenumber = 0;}` binds the controller with the view
 
-When Angular intitalizes this controller, it creates and injects the `$scope` object into the function with [dependency injection](http://docs.angularjs.org/guide/di). Don't worry if this doesn't make sense, it's a bit of Angular magic for creating and using the `$scope` object.
+When Angular initializes this controller, it creates and injects the `$scope` object into the function with [dependency injection](http://docs.angularjs.org/guide/di). Don't worry if this doesn't make sense, it's a bit of Angular magic for creating and using the `$scope` object.
 
 In this case, we are simply binding the number 0 to `somenumber` within the view.
 
@@ -168,7 +168,7 @@ Try your application now in the browser. It should now work.
 
 Before moving on with more Angular, let's step back and look at the functionality of our final app: *The application we'll be developing is a Bitcoin investment calculator that details how much you could potentially profit if you invested X amount of dollars in Bitcoins.*
 
-*What does that mean in terms of HTML structure?* Well, we need an input box for the intial investment and a table that shows IF the price of 1 BTC reaches X, THEN your starting investment would be X AND your profit is X. Let's create the HTML for that now. 
+*What does that mean in terms of HTML structure?* Well, we need an input box for the initial investment and a table that shows IF the price of 1 BTC reaches X, THEN your starting investment would be X AND your profit is X. Let's create the HTML for that now. 
 
 ```html
 <!DOCTYPE html>
@@ -202,7 +202,7 @@ Before moving on with more Angular, let's step back and look at the functionalit
           <h1>Bitcoin Investment<br>Calculator</h1>
           <br><br>
           <form role="form">
-            <label for="starting-investment">Intial Investment (USD)</label>
+            <label for="starting-investment">Initial Investment (USD)</label>
             <input type="number" class="form-control">
           </form>
         </div>
@@ -313,7 +313,7 @@ Check this out in the browser. Depending upon the current price of 1 Bitcoin, yo
 
 ![angular-3](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-3.png)
 
-For clarity, if we look at the first calcuation, `newAmt`, let's plug in the values: `$scope.newAmt = function(1000){return 1000/563.64 * 5000;}`. Make sense?
+For clarity, if we look at the first calculation, `newAmt`, let's plug in the values: `$scope.newAmt = function(1000){return 1000/563.64 * 5000;}`. Make sense?
 
 Add more values into the table:
 
@@ -451,7 +451,7 @@ Finally, update the styles and HTML structure:
           <h1>Bitcoin Investment Calculator</h1>
           <br><br>
           <form role="form">
-            <label for="starting-investment">Intial Investment (USD)</label>
+            <label for="starting-investment">Initial Investment (USD)</label>
             <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
           </form>
           <br>
@@ -521,16 +521,11 @@ In process ...
 
 1. What did we cover
 2. What features did we not cover
-3. What should you have leared
-4. Tie this back to the into
+3. What should you have learned
+4. Tie this back to the intro
 
 ### Stretch goals
 1. Loop within the table
 2. Add D3 table
-3. What else can you do with the Bitpay API?
+3. What else can you do with the BitPay API?
 4. E2E Testing
-
-
-
-
-
