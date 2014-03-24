@@ -515,12 +515,20 @@ Your final app should now look like this:
 
 ## Conclusion
 
+In process ...
+
 ### Basic Conclusion
+
+1. What did we cover
+2. What features did we not cover
+3. What should you have leared
+4. Tie this back to the into
 
 ### Stretch goals
 1. Loop within the table
 2. Add D3 table
 3. What else can you do with the Bitpay API?
+4. E2E Testing
 
 
 
