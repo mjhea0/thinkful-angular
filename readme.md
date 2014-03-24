@@ -385,7 +385,7 @@ Angular [Filters](http://docs.angularjs.org/guide/filter) are used in a number o
 </tr>
 ```
 
-As you probably guessed, the [currency](http://docs.angularjs.org/api/ng/filter/currency) filter formats a number as currency. When used, you can either define a currency, `| currency:"USD$"`, or let Angular decide which to used based on your geolocation, `| currency`.
+As you probably guessed, the [currency](http://docs.angularjs.org/api/ng/filter/currency) filter formats a number as currency. When used, you can either define a currency, `| currency:"USD$"`, or let Angular decide which to use based on your geolocation, `| currency`.
 
 ### Model
 
