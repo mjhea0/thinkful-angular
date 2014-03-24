@@ -6,7 +6,7 @@ Angular JS is a powerful Javascript framework created by Google for building mai
 
 Forget the basic hello world and todo applications - let's build something more [fun](http://#)! 
 
-As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, two-way data binding, and directive. 
+As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
 
 ## What is Angular?
 
@@ -295,9 +295,9 @@ Now, do some basic calculations in the module:
 </script>
 ```
 
-I'll let you evaluate those calculations. Notice how we have to pass a price into the function.
+I'll let you evaluate those calculations for now. We'll break one down further down. Notice how we have to pass a price into the function.
 
-Next, go ahead and append them to the DOM: 
+Next, go ahead and append them to the DOM, making sure to pass in a price: 
 
 ```html
 <tbody>
@@ -309,7 +309,7 @@ Next, go ahead and append them to the DOM:
 </tbody>
 ```
 
-Check this out in the browser. Depending upon the current price of 1 Bitcoint, you should see:
+Check this out in the browser. Depending upon the current price of 1 Bitcoin, you should see:
 
 ![angular-3](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-3.png)
 
