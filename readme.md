@@ -511,9 +511,16 @@ Finally, update the styles and HTML structure:
 
 Your final app should now look like this:
 
+![angular-4](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-4.png)
+
 ## Conclusion
 
-Coming soon ...
+### Basic Conclusion
+
+### Stretch goals
+1. Loop within the table
+2. Add D3 table
+3. What else can you do with the Bitpay API?
 
 
 
