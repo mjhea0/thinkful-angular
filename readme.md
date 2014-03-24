@@ -4,15 +4,15 @@ Angular JS is a powerful Javascript framework created by Google for building mai
 
 > First, before going any further, to fully understand this tutorial you need to be comfortable with *vanilla* Javascript, not just jQuery. For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
 
-Forget the basic hello world and todo applications - let's build something more [fun](link)! 
+Forget the basic hello world and todo applications - let's build something more [fun](http://#)! 
 
-As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, data-binding, and routing. 
+As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, two-way data binding, and directive. 
 
 ## What is Angular?
 
 Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, single page applications (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm:
 
-*In Angular applications, the view is the Document Object Model (DOM), the controllers are Javascript classes, and the model data is stored in object properties.* - Source
+*In Angular applications, the view is the Document Object Model (DOM), the controllers are Javascript classes, and the model data is stored in object properties.* - [AngularJS](http://www.amazon.com/AngularJS-Brad-Green/dp/1449344852)
 
 Working within that paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM. Say goodbye to jQuery. 
 
@@ -20,11 +20,11 @@ Angular is also very easy to learn since it works directly with HTML, simply ext
 
 Before we start building, take a minute to read over some of Angular's main features:
 
-1. Templates: Templates reside right in the DOM. No more Handlebars! 
-2. Two-way data-binding: Changes in your Javascript automatically update the DOM - and vice versa.
-3. Routing: Easily associate controllers with temapltes
-4. Directives: Encapsulates templates and code for easy reuse.
-5. Testability: AngularJS was designed in a way your web app can be fully testable.
+1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside right in the DOM. No more Handlebars! 
+2. **[Two-way data binding](http://docs.angularjs.org/guide/databinding)**: Changes in your Javascript automatically update the DOM - and vice versa.
+3. **[Routing](http://docs.angularjs.org/api/ngRoute/service/$route)**: Easily associate controllers with templates
+4. **[Directives](http://docs.angularjs.org/guide/directive)**: Encapsulates templates and code for easy reuse.
+5. **[Testability](http://docs.angularjs.org/guide/e2e-testing)**: AngularJS was designed in a way your web app can be fully testable.
 
 ## Basic Project
 
