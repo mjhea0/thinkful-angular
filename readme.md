@@ -51,6 +51,8 @@ Let's start with the very basics, with a barebones HTML5 project boilerplate:
 ```
 See this [link](https://github.com/mjhea0/thinkful-html#html) if you'd like to know more info about this structure. Notice how I included Angular in the page - `<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>`. You must do this before the closing `<body>` tag.
 
+Save this as *index.html*.
+
 Next, we'll dive right into Angular, first let's define a *scope* for our project:
 
 ```html
@@ -121,6 +123,8 @@ Play around with code here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.
 With the basics out of the way, let's move on and create a more robust app.
 
 ## Bitcoin Calculator
+
+We'll be building on the same file from before. Feel free to save it as something new, or in a new directory, like - *btc-calculator/index.html*, for example.
 
 ### Module and Controller
 
