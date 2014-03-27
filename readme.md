@@ -6,26 +6,13 @@ Angular JS is a powerful Javascript framework created by Google for building mai
 
 Forget the basic hello world and todo applications - let's build something more [fun](http://#)! 
 
-As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular
-| "user Angular. We will highlight"
-while also highlighting many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
+As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular. We will highlight many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
 
 ## What is Angular?
 
-Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, single page applications (SPAs) 
-| the road to hell is paved in acronyms
-and full web applications within the familiar Model View Controller (MVC) 
-| except for that one, that one's a keeper
-| but more importantly, it is not an MVC framework, at best it's MVVM, and [here](https://plus.google.com/+AngularJS/posts/aZNVhj355G2)
-| they're being cheeky when they say it's MV-Whatever
-paradigm:
+Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application)  (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm.
 
-*In Angular applications, the view is the Document Object Model (DOM), the controllers are Javascript classes, and the model data is 
-stored in object properties.* - [AngularJS](http://www.amazon.com/AngularJS-Brad-Green/dp/1449344852)
-| Try looking in the angular community for citations, the discussions there are more up to date. In only a year angular has gone through two major iterations that break the previous API. 
-
-Working within that paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM. Say goodbye to jQuery.
-| Not really, it's important to remember that we're just using  ["jQuery Lite"](http://docs.angularjs.org/api/ng/function/angular.element)
+Working within that paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM.
 
 Angular is also very easy to learn since it works directly with HTML, simply extending its functionality. 
 
@@ -90,8 +77,6 @@ Here we are defining the directive [`ng-model`](http://docs.angularjs.org/api/ng
 Next, by wrapping the model value, `somenumber` in double curly braces, we are simply telling Angular to replace that text with the actual value, which, again, comes from the number added to the input box. 
 
 Here's the final code, which includes some Bootstrap styles:
-
-| repeat this as comments in the code
 
 ```html
 <!DOCTYPE html>
