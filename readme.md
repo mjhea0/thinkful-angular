@@ -6,15 +6,13 @@ Angular JS is a powerful Javascript framework created by Google for building mai
 
 Forget the basic hello world and todo applications - let's build something more [fun](http://#)! 
 
-As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular while also highlighting many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
+As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular. We will highlight many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
 
 ## What is Angular?
 
-Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, single page applications (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm:
+Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application)  (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm.
 
-*In Angular applications, the view is the Document Object Model (DOM), the controllers are Javascript classes, and the model data is stored in object properties.* - [AngularJS](http://www.amazon.com/AngularJS-Brad-Green/dp/1449344852)
-
-Working within that paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM. Say goodbye to jQuery. 
+Working within that paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM.
 
 Angular is also very easy to learn since it works directly with HTML, simply extending its functionality. 
 

@@ -31,6 +31,11 @@
         $scope.initalAmt  = 5000;
         $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initalAmt;}
         $scope.profit     = function(price){return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;} 
+        /*
+          We've set some values on $scope, but how does that update the UI?
+          Angular lives and dies by its digest cycle, knowing about it early is
+          helpful. Take some time to explain what happens after $http[method] completes 
+         */
       });
     });
 </script>
