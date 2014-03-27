@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- controller logic -->
-<html ng-app="btcCalc" ng-controller="btcCtrl">
+<html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
     <meta charset="utf-8">
@@ -18,8 +18,8 @@
     </style>
 <!-- angular module -->
 <script type="text/javascript">
-  var btcCalc = angular.module('btcCalc', []);
-    btcCalc.controller('btcCtrl', function($scope, $http){
+  var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+    bitcoinCalculator.controller('bitcoinController', function($scope, $http){
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
@@ -31,11 +31,6 @@
         $scope.initalAmt  = 5000;
         $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initalAmt;}
         $scope.profit     = function(price){return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;} 
-        /*
-          We've set some values on $scope, but how does that update the UI?
-          Angular lives and dies by its digest cycle, knowing about it early is
-          helpful. Take some time to explain what happens after $http[method] completes 
-         */
       });
     });
 </script>

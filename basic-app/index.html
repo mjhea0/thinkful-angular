@@ -1,20 +1,6 @@
 <!DOCTYPE html>
-<!--
-  I would have called this bootstrapping, once for the app and once for the controller
-  ngApp is sugar for angular.bootstrap
-    http://docs.angularjs.org/api/ng/function/angular.bootstrap
-  ngController is a directive that will run the btcCtrl controller
-
-  I also think the names should be more generous, short compressed names can
-  be intimidating and hard to remember for beginners. Additionally the 
-  compressed names are only differentiated by the last three characters. There's 
-  nothing wrong with bitcoinCalculator or bitcoinController.
-
-  @expand why do add this? why do we put it on the html element? can we put it
-          anywhere on the page? 
--->
 <!-- controller logic -->
-<html ng-app="btcCalc" ng-controller="btcCtrl">
+<html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
     <meta charset="utf-8">
@@ -30,17 +16,8 @@
     </style>
     <!-- angular module -->
     <script type="text/javascript">
-/*
-      @expand what is an angular.module?
- */
-      var btcCalc = angular.module('btcCalc', []);
-/*
-        @expand explain what's going here
- */
-        btcCalc.controller('btcCtrl', ['$scope', function ($scope) {
-  /*
-          @expand what is scope, and where does 'somenumber' go?
-   */
+      var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+        bitcoinCalculator.controller('bitcoinController', ['$scope', function ($scope) {
           $scope.somenumber = 0;
         }]);
     </script>
@@ -50,18 +27,8 @@
       <h1>Bitcoin Investment<br>Calculator</h1>
       <br>
       <h3>How many Bitcoins do you have?</h3>
-      <!-- model -->
-      <!--
-        Two way binding is Angular's baby, we should expand upon it whenever we can
-        @expand what does ng-model do? what is 'ng-model'?
-      -->
       <input type="number" ng-model="somenumber" placeholder="20">
       <br><br>
-      <!--
-        Good time to address how Angular parses your html and connects to the
-        controller and the controllers scope.
-        @expand where did somenumber come from? How is this connected to ng-model?
-      -->
       <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
     </div>
   </body>

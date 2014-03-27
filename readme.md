@@ -12,7 +12,7 @@ As you can tell, the application we'll be developing is a Bitcoin investment cal
 
 Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm.
 
-> Although, this introductory tutorial focuses onthe MVC paradigm, which Angular was originally employed, it's now embraced more of an [MVVM](http://addyosmani.com/blog/understanding-mvvm-a-guide-for-javascript-developers/) (Model View ViewModel) pattern - which is based on MVC. I urge you not to get caught up in the terminology or jargon. In fact, the ViewModel portion is a specialized controller. My advice: Start with thinking in terms of MVC, then move into MVVM. This will make the development process much easier.
+> Although, this introductory tutorial focuses on the MVC paradigm, which Angular originally employed, Angular now embraces more of an [MVVM](http://addyosmani.com/blog/understanding-mvvm-a-guide-for-javascript-developers/) (Model View ViewModel) pattern - which is based on MVC. I urge you not to get caught up in the terminology or jargon. In fact, the ViewModel portion is a specialized controller. My advice: Start with thinking in terms of MVC, then move into MVVM. This will make the development process much easier.
 
 Working within the MVC paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM.
 
@@ -132,10 +132,10 @@ First, let's add in a *controller* and name our Angular app:
 
 ```html
 <!-- controller logic -->
-<html ng-app="btcCalc" ng-controller="btcCtrl">
+<html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
 ```
 
-[Controllers](http://docs.angularjs.org/api/ng/directive/ngController) are simply used to control, or talk to, the view.
+[Controllers](http://docs.angularjs.org/api/ng/directive/ngController), `ngController`, is a directive that will run the `bitcoinController` controller, which controls, or talks to, the view.
 
 If you try the app now, you'll notice it's broken. That's because we defined a controller, but we have not defined how said controller works. Let's do that.
 
@@ -144,8 +144,8 @@ Add an Angular module:
 ```html
 <!-- angular module -->
 <script type="text/javascript">
-  var btcCalc = angular.module('btcCalc', []);
-    btcCalc.controller('btcCtrl', ['$scope', function ($scope) {
+  var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+    bitcoinCalculator.controller('bitcoinController', ['$scope', function ($scope) {
       $scope.somenumber = 0;
     }]);
 </script>
@@ -173,7 +173,7 @@ Before moving on with more Angular, let's step back and look at the functionalit
 ```html
 <!DOCTYPE html>
 <!-- controller logic -->
-<html ng-app="btcCalc" ng-controller="btcCtrl">
+<html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
     <meta charset="utf-8">
@@ -189,8 +189,8 @@ Before moving on with more Angular, let's step back and look at the functionalit
     </style>
     <!-- angular module -->
     <script type="text/javascript">
-      var btcCalc = angular.module('btcCalc', []);
-        btcCalc.controller('btcCtrl', ['$scope', function ($scope) {
+      var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+        bitcoinCalculator.controller('bitcoinController', ['$scope', function ($scope) {
           $scope.somenumber = 0;
         }]);
     </script>
@@ -249,8 +249,8 @@ Next, update our module and controller.
 ```html
 <!-- angular module -->
 <script type="text/javascript">
-  var btcCalc = angular.module('btcCalc', []);
-    btcCalc.controller('btcCtrl', function($scope, $http){
+  var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+    bitcoinCalculator.controller('bitcoinController', function($scope, $http){
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
@@ -277,8 +277,8 @@ Now, do some basic calculations in the module:
 ```html
 <!-- angular module -->
 <script type="text/javascript">
-  var btcCalc = angular.module('btcCalc', []);
-    btcCalc.controller('btcCtrl', function($scope, $http){
+  var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+    bitcoinCalculator.controller('bitcoinController', function($scope, $http){
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
@@ -409,7 +409,7 @@ Finally, update the styles and HTML structure:
 ```html
 <!DOCTYPE html>
 <!-- controller logic -->
-<html ng-app="btcCalc" ng-controller="btcCtrl">
+<html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
     <meta charset="utf-8">
@@ -427,8 +427,8 @@ Finally, update the styles and HTML structure:
     </style>
 <!-- angular module -->
 <script type="text/javascript">
-  var btcCalc = angular.module('btcCalc', []);
-    btcCalc.controller('btcCtrl', function($scope, $http){
+  var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+    bitcoinCalculator.controller('bitcoinController', function($scope, $http){
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
