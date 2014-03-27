@@ -10,9 +10,11 @@ As you can tell, the application we'll be developing is a Bitcoin investment cal
 
 ## What is Angular?
 
-Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application)  (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm.
+Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm.
 
-Working within that paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM.
+> Although, this introductory tutorial focuses onthe MVC paradigm, which Angular was originally employed, it's now embraced more of an [MVVM](http://addyosmani.com/blog/understanding-mvvm-a-guide-for-javascript-developers/) (Model View ViewModel) pattern - which is based on MVC. I urge you not to get caught up in the terminology or jargon. In fact, the ViewModel portion is a specialized controller. My advice: Start with thinking in terms of MVC, then move into MVVM. This will make the development process much easier.
+
+Working within the MVC paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM.
 
 Angular is also very easy to learn since it works directly with HTML, simply extending its functionality. 
 
