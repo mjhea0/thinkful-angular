@@ -1,6 +1,5 @@
 Feedback
 ===
----
 
 
 Response to notes
@@ -51,7 +50,6 @@ That said, two way binding and the digest cycle are vital for understanding how 
  >
  > ---
 
----
 
 Writing Style
 ---
@@ -121,3 +119,6 @@ I had some thoughts the first time I read the tutorial, after re-reading it I fe
 > Testability: AngularJS was designed in a way your web app can be fully testable.
 
 - This could be a controversial statement depending on who you're talking too. Angular bundles it's own testing suite because of the difficulty of hooking into the digest cycle. For example, expectations in karma e2e tests, `expect(somethingTrue())` return future objects that resolve at the end of a cycle, this fullfils their promises and causes the evaluation of their assertion `expect(somethingTrue()).toBe(true)`. So, there's really no choice, you have to use Protractor or Karma—the alernative is no test coverage. Apologies for the diatribe, but the digest cycle can add a great deal of difficulty to what can be tested easily.
+
+
+I put a lot out there, I hope you find it useful.
