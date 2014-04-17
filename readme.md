@@ -1,30 +1,25 @@
 # AngularJS by Example - Building a Bitcoin Investment Calculator
 
-Angular JS is a powerful Javascript framework created by Google for building maintainable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
+Angular JS is a client-side Javascript framework used for building maintainable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
 
 > First, before going any further, to fully understand this tutorial you need to be comfortable with *vanilla* Javascript, not just jQuery. For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
 
-Forget the basic hello world and todo applications - let's build something more [fun](http://#)! 
+Forget the hello world and todo apps - let's build something more [fun](http://#)! 
 
-As you can tell, the application we'll be developing is a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, we'll walk you through the basics of designing a web app using Angular. We will highlight many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
+We'll be developing a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, I'll walk you through the basics of designing a web app using Angular. We'll highlight many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
 
 ## What is Angular?
 
-Originally developed in 2009 by two Google employees, Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) (SPAs) and full web applications within the familiar Model View Controller (MVC) paradigm.
+Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) as well as full web applications within the Model View Controller (MVC) paradigm (Or, more precislely: the [MVVM](http://www.dotnet-tricks.com/Tutorial/designpatterns/2FMM060314-Understanding-MVC,-MVP-and-MVVM-Design-Patterns.html) pattern).
 
-> Although, this introductory tutorial focuses on the MVC paradigm, which Angular originally employed, Angular now embraces more of an [MVVM](http://addyosmani.com/blog/understanding-mvvm-a-guide-for-javascript-developers/) (Model View ViewModel) pattern - which is based on MVC. I urge you not to get caught up in the terminology or jargon. In fact, the ViewModel portion is a specialized controller. My advice: Start with thinking in terms of MVC, then move into MVVM. This will make the development process much easier.
+Working within the MVC paradigm, it's easy to add/bind data to your page, which automatically updates because the framework is always watching for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM. It's also easy to learn since it works directly with HTML, by simply extending its functionality. 
 
-Working within the MVC paradigm, you will soon find out, how easy it is to add (or bind) data to your page, which automatically updates because the framework is always "watching" for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM.
+Before we start building, read over some of Angular's main features:
 
-Angular is also very easy to learn since it works directly with HTML, simply extending its functionality. 
-
-Before we start building, take a minute to read over some of Angular's main features:
-
-1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside right in the DOM. No more Handlebars! 
+1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside right in your HTML. 
 2. **[Two-way data binding](http://docs.angularjs.org/guide/databinding)**: Changes in your Javascript automatically update the DOM - and vice versa.
-3. **[Routing](http://docs.angularjs.org/api/ngRoute/service/$route)**: Easily associate controllers with templates
-4. **[Directives](http://docs.angularjs.org/guide/directive)**: Encapsulates templates and code for easy reuse.
-5. **[Testability](http://docs.angularjs.org/guide/e2e-testing)**: AngularJS was designed in a way your web app can be fully testable.
+3. **[Routing](http://docs.angularjs.org/api/ngRoute/service/$route)**: Routing represents the possible application states; controllers and templates are employed to serve this purpose.
+4. **[Directives](http://docs.angularjs.org/guide/directive)**: Directive's make it easy to reuse code.
 
 ## Basic Project
 
