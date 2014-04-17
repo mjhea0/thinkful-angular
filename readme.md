@@ -16,7 +16,7 @@ Working within the MVC paradigm, it's easy to add/bind data to your page, which 
 
 Before we start building, read over some of Angular's main features:
 
-1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside right in your HTML. 
+1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside directly in your HTML. 
 2. **[Two-way data binding](http://docs.angularjs.org/guide/databinding)**: Changes to your Javascript automatically update the DOM. In other words, it doesn't require an explicit refresh.
 3. **[Routing](http://docs.angularjs.org/api/ngRoute/service/$route)**: Routing represents the possible application states; controllers and templates are employed to serve this purpose.
 4. **[Directives](http://docs.angularjs.org/guide/directive)**: Directive's make it easy to reuse code.
