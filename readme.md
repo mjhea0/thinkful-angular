@@ -10,14 +10,14 @@ We'll be developing a Bitcoin investment calculator that details how much you co
 
 ## What is Angular?
 
-Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) as well as full web applications within the Model View Controller (MVC) paradigm (Or, more precislely: the [MVVM](http://www.dotnet-tricks.com/Tutorial/designpatterns/2FMM060314-Understanding-MVC,-MVP-and-MVVM-Design-Patterns.html) pattern).
+Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) as well as full web applications within the Model View Controller (MVC) pattern (Or, more precislely: the [MVVM](http://www.dotnet-tricks.com/Tutorial/designpatterns/2FMM060314-Understanding-MVC,-MVP-and-MVVM-Design-Patterns.html) pattern).
 
 Working within the MVC paradigm, it's easy to add/bind data to your page, which automatically updates because the framework is always watching for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM. It's also easy to learn since it works directly with HTML, by simply extending its functionality. 
 
 Before we start building, read over some of Angular's main features:
 
 1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside right in your HTML. 
-2. **[Two-way data binding](http://docs.angularjs.org/guide/databinding)**: Changes in your Javascript automatically update the DOM - and vice versa.
+2. **[Two-way data binding](http://docs.angularjs.org/guide/databinding)**: Changes to your Javascript automatically update the DOM. In other words, it doesn't require an explicit refresh.
 3. **[Routing](http://docs.angularjs.org/api/ngRoute/service/$route)**: Routing represents the possible application states; controllers and templates are employed to serve this purpose.
 4. **[Directives](http://docs.angularjs.org/guide/directive)**: Directive's make it easy to reuse code.
 
@@ -44,6 +44,7 @@ Let's start with the very basics, with a barebones HTML5 project boilerplate:
   </body>
 </html>
 ```
+
 See this [link](https://github.com/mjhea0/thinkful-html#html) if you'd like to know more info about this structure. Notice how I included Angular in the page - `<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>`. You must do this before the closing `<body>` tag.
 
 Save this as *index.html*.
@@ -55,7 +56,7 @@ Next, we'll dive right into Angular, first let's define a *scope* for our projec
 <html ng-app>
 ```
 
-This simply binds an unnamed Angular app to the DOM. Angular allows us to have multiple apps within the same HTML page, so this simple directive, [`ng-app`](http://docs.angularjs.org/api/ng/directive/ngApp), defines where each app begins and ends (scope), literally telling Angular where the app is active. In this case, since we are placing the app on the `<html>` tag, we are essentially saying, "We have one Angular app that spans the entire page". 
+This simply binds an unnamed Angular app to the DOM. Angular allows us to have multiple apps within the same HTML page, so this simple directive, [`ng-app`](http://docs.angularjs.org/api/ng/directive/ngApp), defines where each app begins and ends (scope), literally telling Angular where the app is active. In this case, since we are placing the app on the `<html>` tag as an HTML attribute, we are essentially saying, "We have one Angular app that spans the entire page". 
 
 Just remember that you can place this directive anywhere on your page, and your app will run within that defined scope, such as a `<div>`, for example.
 
@@ -71,7 +72,7 @@ Finally, let's add in the *model* and get our app working:
 
 Here we are defining the directive [`ng-model`](http://docs.angularjs.org/api/ng/directive/ngModel) in the input box as `ng-model="somenumber"`. By doing so, we have bound the value within the input box to the model, so when the input value changes, Angular automatically updates the model. This is [two-way binding](http://docs.angularjs.org/guide/databinding). Get used to this concept as this is part of what makes Angular so powerful - and fun to use.
 
-Next, by wrapping the model value, `somenumber` in double curly braces, we are simply telling Angular to replace that text with the actual value, which, again, comes from the number added to the input box. 
+Next, by wrapping the model value, `somenumber` in double curly braces - which are used as delimiters for the results from expressions - we are simply telling Angular to replace that text with the actual value, which, again, comes from the number added to the input box. 
 
 Here's the final code, which includes some Bootstrap styles:
 
@@ -111,7 +112,7 @@ Run this in your browser. You should see this:
 
 ![angular-1](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-1.png)
 
-Watch what happens when you change the value in the input box. Two-way binding in action!
+Watch what happens when you change the value in the input box. Two-way binding in action! The DOM changes with each keystroke, without the need for any code to refresh the page.
 
 Play around with code here: [http://jsfiddle.net/mjhea0/9ear3/](http://jsfiddle.net/mjhea0/9ear3/). You can also grab the actual HTML from this [repo](https://github.com/mjhea0/thinkful-angular/tree/master/basic-app).
 
