@@ -1,12 +1,12 @@
 # AngularJS by Example - Building a Bitcoin Investment Calculator
 
-Angular JS is a client-side Javascript framework used for building maintainable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
+Angular JS is a client-side Javascript framework used for simplifying the process of developing maintainable web applications. In this tutorial we'll design a basic app that highlights much of what the framework has to offer. 
 
 > First, before going any further, to fully understand this tutorial you need to be comfortable with *vanilla* Javascript, not just jQuery. For a crash course in Javascript, check out the Codeacademy Javascript [track](http://www.codecademy.com/tracks/javascript). 
 
-Forget the hello world and todo apps - let's build something more [fun](http://#)! 
+First off, what are we building? Well, forget the overdone hello world and todo apps, let's build something more - a Bitcoin Calculator! 
 
-We'll be developing a Bitcoin investment calculator that details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, I'll walk you through the basics of designing a web app using Angular. We'll highlight many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
+This app details how much you could *potentially* profit if you invested X amount of dollars in Bitcoins. Through this tutorial, I'll walk you through the basics of designing a web app using Angular. We'll highlight many of the key features of the framework, including templating, two-way data binding, directives, and filters. 
 
 ## What is Angular?
 
