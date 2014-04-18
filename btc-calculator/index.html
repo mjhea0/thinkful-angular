@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- define our angular app -->
+<!-- define our angular app and set the controller -->
 <html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
@@ -20,6 +20,7 @@
 <script type="text/javascript">
   var bitcoinCalculator = angular.module('bitcoinCalculator', []);
     bitcoinCalculator.controller('bitcoinController', function($scope, $http){
+      // calling the api, grabbing the value for USD, appending it to the dom
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
