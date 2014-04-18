@@ -10,7 +10,7 @@ We'll be developing a Bitcoin investment calculator that details how much you co
 
 ## What is Angular?
 
-Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) as well as full web applications within the Model View Controller (MVC) pattern (Or, more precislely: the [MVVM](http://www.dotnet-tricks.com/Tutorial/designpatterns/2FMM060314-Understanding-MVC,-MVP-and-MVVM-Design-Patterns.html) pattern).
+Angular is designed for creating dynamic, [single page applications](https://en.wikipedia.org/wiki/Single-page_application) as well as full web applications within the Model View Controller (MVC) pattern (Or, more precisely: the [MVVM](http://www.dotnet-tricks.com/Tutorial/designpatterns/2FMM060314-Understanding-MVC,-MVP-and-MVVM-Design-Patterns.html) pattern).
 
 Working within the MVC paradigm, it's easy to add/bind data to your page, which automatically updates because the framework is always watching for changes. Put another way, with Angular, we can write front-end code without having to directly manipulate the DOM. It's also easy to learn since it works directly with HTML, by simply extending its functionality. 
 
@@ -19,7 +19,7 @@ Before we start building, read over some of Angular's main features:
 1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside directly in your HTML. 
 2. **[Two-way data binding](http://docs.angularjs.org/guide/databinding)**: Changes to your Javascript automatically update the DOM. In other words, it doesn't require an explicit refresh.
 3. **[Routing](http://docs.angularjs.org/api/ngRoute/service/$route)**: Routing represents the possible application states; controllers and templates are employed to serve this purpose.
-4. **[Directives](http://docs.angularjs.org/guide/directive)**: Directives are used for extending HTML with new functionalites as well as encapsulating code for easy reuse.
+4. **[Directives](http://docs.angularjs.org/guide/directive)**: Directives are used for extending HTML with new functionality as well as encapsulating code for easy reuse.
 
 ## Basic Project
 
@@ -131,7 +131,7 @@ First, let's add in a *controller* and name our Angular app:
 <html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
 ```
 
-The [Controller](http://docs.angularjs.org/api/ng/directive/ngController), `ngController`, is a directive that will run the `bitcoinController` controller, which controls, or talks to, the view. Controllers link and provide information to the model and our view.
+The [Controller](http://docs.angularjs.org/api/ng/directive/ngController), `ngController`, is a directive that will run the `bitcoinController` controller, which controls, or talks to, the view. Controllers link and provide information to the model and our view. You'll also notice that we assigned a value to our `ng-app` directive: `ng-app="bitcoinCalculator"`. This tells angular which module we'll be using in our app.
 
 If you try the app now, you'll notice it's broken. That's because we defined a controller, but we have not defined how said controller works. Let's do that.
 
