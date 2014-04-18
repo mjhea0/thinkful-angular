@@ -19,7 +19,7 @@ Before we start building, read over some of Angular's main features:
 1. **[Templates](http://docs.angularjs.org/guide/templates)**: Templates reside directly in your HTML. 
 2. **[Two-way data binding](http://docs.angularjs.org/guide/databinding)**: Changes to your Javascript automatically update the DOM. In other words, it doesn't require an explicit refresh.
 3. **[Routing](http://docs.angularjs.org/api/ngRoute/service/$route)**: Routing represents the possible application states; controllers and templates are employed to serve this purpose.
-4. **[Directives](http://docs.angularjs.org/guide/directive)**: Directives are used for encapsulating teampkates and code for easy reuse.
+4. **[Directives](http://docs.angularjs.org/guide/directive)**: Directives are used for extending HTML with new functionalites as well as encapsulating code for easy reuse.
 
 ## Basic Project
 
@@ -52,11 +52,11 @@ Save this as *index.html*.
 Next, we'll dive right into Angular, first let's define a *scope* for our project:
 
 ```html
-<!-- controller logic -->
+<!-- define our angular app -->
 <html ng-app>
 ```
 
-This simply binds an unnamed Angular app to the DOM. Angular allows us to have multiple apps within the same HTML page, so this simple directive, [`ng-app`](http://docs.angularjs.org/api/ng/directive/ngApp), defines where each app begins and ends (scope), literally telling Angular where the app is active. In this case, since we are placing the app on the `<html>` tag as an HTML attribute, we are essentially saying, "We have one Angular app that spans the entire page". 
+This simply binds or [bootstraps](https://docs.angularjs.org/guide/bootstrap) an unnamed Angular app to the DOM. Angular allows us to have multiple apps within the same HTML page, so this simple directive, [`ng-app`](http://docs.angularjs.org/api/ng/directive/ngApp), defines where each app begins and ends (scope), literally telling Angular where the app is active. In this case, since we are placing the app on the `<html>` tag as an HTML attribute, we are essentially saying, "We have one Angular app that spans the entire page". 
 
 Just remember that you can place this directive anywhere on your page, and your app will run within that defined scope, such as a `<div>`, for example.
 
@@ -78,7 +78,7 @@ Here's the final code, which includes some Bootstrap styles:
 
 ```html
 <!DOCTYPE html>
-<!-- controller logic -->
+<!-- define our angular app -->
 <html ng-app>
   <head>
     <title>Bitcoin Investment Calculator</title>
@@ -127,11 +127,11 @@ We'll be building on the same file from before. Feel free to save it as somethin
 First, let's add in a *controller* and name our Angular app:
 
 ```html
-<!-- controller logic -->
+<!-- define our angular app and set the controller -->
 <html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
 ```
 
-[Controllers](http://docs.angularjs.org/api/ng/directive/ngController), `ngController`, is a directive that will run the `bitcoinController` controller, which controls, or talks to, the view.
+The [Controller](http://docs.angularjs.org/api/ng/directive/ngController), `ngController`, is a directive that will run the `bitcoinController` controller, which controls, or talks to, the view. Controllers link and provide information to the model and our view.
 
 If you try the app now, you'll notice it's broken. That's because we defined a controller, but we have not defined how said controller works. Let's do that.
 
@@ -142,12 +142,22 @@ Add an Angular module:
 <script type="text/javascript">
   var bitcoinCalculator = angular.module('bitcoinCalculator', []);
     bitcoinCalculator.controller('bitcoinController', ['$scope', function ($scope) {
+      // attaching 0 to the DOM
       $scope.somenumber = 0;
     }]);
 </script>
 ```
 
-Angular [modules](http://docs.angularjs.org/guide/module) are used for organizing Javascript apps into separate self-contained components.
+Angular [modules](http://docs.angularjs.org/guide/module) are used for organizing Javascript apps/code into separate self-contained components.
+
+Inside the modules we can add:
+
+- controllers
+- directives
+- filters
+- routes
+
+In the current app:
 
 1. `angular.module("name",[])` instantiates and returns a new module
 2. `function ($scope) {$scope.somenumber = 0;}` binds the controller with the view
@@ -168,7 +178,7 @@ Before moving on with more Angular, let's step back and look at the functionalit
 
 ```html
 <!DOCTYPE html>
-<!-- controller logic -->
+<!-- define our angular app and set the controller -->
 <html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
@@ -187,6 +197,7 @@ Before moving on with more Angular, let's step back and look at the functionalit
     <script type="text/javascript">
       var bitcoinCalculator = angular.module('bitcoinCalculator', []);
         bitcoinCalculator.controller('bitcoinController', ['$scope', function ($scope) {
+          // attaching 0 to the DOM
           $scope.somenumber = 0;
         }]);
     </script>
@@ -247,6 +258,7 @@ Next, update our module and controller.
 <script type="text/javascript">
   var bitcoinCalculator = angular.module('bitcoinCalculator', []);
     bitcoinCalculator.controller('bitcoinController', function($scope, $http){
+      // calling the api, grabbing the value for USD, appending it to the dom
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
@@ -275,6 +287,7 @@ Now, do some basic calculations in the module:
 <script type="text/javascript">
   var bitcoinCalculator = angular.module('bitcoinCalculator', []);
     bitcoinCalculator.controller('bitcoinController', function($scope, $http){
+      // calling the api, grabbing the value for USD, appending it to the dom
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
@@ -404,7 +417,7 @@ Finally, update the styles and HTML structure:
 
 ```html
 <!DOCTYPE html>
-<!-- controller logic -->
+<!-- define our angular app and set the controller -->
 <html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
@@ -425,6 +438,7 @@ Finally, update the styles and HTML structure:
 <script type="text/javascript">
   var bitcoinCalculator = angular.module('bitcoinCalculator', []);
     bitcoinCalculator.controller('bitcoinController', function($scope, $http){
+      // calling the api, grabbing the value for USD, appending it to the dom
       $http.get("https://bitpay.com/api/rates")
       .success(function(data){
         $scope.rates = data;
