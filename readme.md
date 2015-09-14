@@ -14,11 +14,11 @@ This app details how much you could *potentially* profit if you invested X amoun
 
 ## Contents
 
-1. Part 1 - What is Angular?
-1. Part 2 - Basic Project
-1. Part 3 - Bitcoin Calculator
-1. Part 4 - Data Visualization
-1. Part 5 - Historical Price Chart
+1. [Part 1 - What is Angular?](https://github.com/mjhea0/thinkful-angular#part-1---what-is-angular)
+1. [Part 2 - Basic Project](https://github.com/mjhea0/thinkful-angular#part-2---basic-project)
+1. [Part 3 - Bitcoin Calculator](https://github.com/mjhea0/thinkful-angular#part-3---bitcoin-calculator)
+1. [Part 4 - Data Visualization](https://github.com/mjhea0/thinkful-angular#part-4---data-visualization)
+1. [Part 5 - Historical Price Chart](https://github.com/mjhea0/thinkful-angular#part-5---historical-price-chart)
 
 ## Part 1 - What is Angular?
 
@@ -259,7 +259,7 @@ Check it out in your browser. It should look like this:
 
 ![angular-2](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-2.png)
 
-Nothing too exciting happening; just another input box and a table, along with more Bootstrap styles. You can grab the Bitcoin image [here](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/part2/img/btc.png).
+Nothing too exciting happening; just another input box and a table, along with more Bootstrap styles. You can grab the Bitcoin image [here](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/part3/img/btc.png).
 
 ### Update Module and Controller
 
@@ -535,7 +535,7 @@ Your app should now look like this:
 
 ![angular-4](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-4.png)
 
-Next, let's look at adding data visualization. Need the code for Part 3? Grab it [here](https://github.com/mjhea0/thinkful-angular/tree/master/part3)
+Next, let's look at adding data visualization. Need the code for Part 3? Grab it [here](https://github.com/mjhea0/thinkful-angular/tree/master/part3).
 
 ## Part 4 - Data Visualization
 
@@ -811,11 +811,11 @@ Test this out! You should see an interactive chart. Try selecting parts of the l
 
 ![angular-6](https://raw.githubusercontent.com/mjhea0/thinkful-angular/master/angular-6.png)
 
-For more configuration options, check out the official [documenation](http://cmaurer.github.io/angularjs-nvd3-directives/line.chart.html).
+For more configuration options, check out the official [documentation](http://cmaurer.github.io/angularjs-nvd3-directives/line.chart.html).
 
 ## Conclusion
 
-Well, we accomplised a lot but, in actuality, really just scratched the surface of Angular. The framework has so much more to offer. Go back and review what you've learned thus far, and see if you can learn more by extending this application on your own. Start by looking at the [BitPay API](https://bitpay.com/api) to see what else you can implement. You could also break apart your controllers into two seperate controllers and even abstract some of the logic out to [factories and services](http://mherman.org/blog/2014/06/12/primer-on-angularjs-service-types/#.VfbWXFNViko).
+Well, we accomplished a lot but, in actuality, really just scratched the surface of Angular. The framework has so much more to offer. Go back and review what you've learned thus far, and see if you can learn more by extending this application on your own. Start by looking at the [BitPay API](https://bitpay.com/api) to see what else you can implement. You could also break apart your controllers into two separate controllers and even abstract some of the logic out to [factories and services](http://mherman.org/blog/2014/06/12/primer-on-angularjs-service-types/#.VfbWXFNViko).
 
 Grab the final code from the [repo](https://github.com/mjhea0/thinkful-angular/tree/master/btc-calculator). Cheers!
 
