@@ -1,0 +1,20 @@
+label, table {
+  font-size: 15px;
+}
+
+input {
+  max-width: 200px;
+}
+
+.number {
+  font-weight: bold;
+}
+
+.jumbotron {
+  height: 100%;
+  margin-bottom: 0
+}
+
+.chart {
+  height: 400px;
+}

@@ -7,38 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- stylesheets -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <style>
+      .number {font-weight: bold;}
+      label, table {font-size: 15px;}
+      input {max-width: 200px;}
+    </style>
+    <!-- angular module -->
+    <script type="text/javascript">
+      var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+        bitcoinCalculator.controller('bitcoinController', function($scope, $http){
+          // calling the api, grabbing the value for USD, appending it to the dom
+          $http.get("https://bitpay.com/api/rates")
+          .success(function(data){
+            $scope.rates = data;
+            for(var i=0;i<data.length;i++){
+              if (data[i].code == "USD"){
+                $scope.currRate = data[i].rate;
+              }
+            }
+            $scope.initalAmt  = 5000;
+            $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initalAmt;}
+            $scope.profit     = function(price){return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;}
+          });
+        });
+    </script>
   </head>
   <body>
-
     <div class="jumbotron">
-
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-          <h1>Bitcoin Investment<br>Calculator</h1>
+        <div class="col-sm-12">
+          <h1>Bitcoin Investment Calculator</h1>
           <br><br>
+          <form role="form">
+            <label for="starting-investment">Initial Investment (USD)</label>
+            <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
+          </form>
+          <br>
+          <p>Current Price (USD): <span class="number">{{currRate | currency }}</span></p>
         </div>
       </div>
-
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-          <div class="col-sm-6">
-            <form role="form">
-              <label for="starting-investment">Initial Investment (USD)</label>
-              <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
-            </form>
-            <br>
-            <p>Current Price (USD): <span class="number">{{currRate | currency }}</span></p>
-          </div>
-          <div class="col-sm-6">
-            <img src="img/btc.png" width="100">
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-7">
           <br><br>
           <table class="table table-bordered">
             <thead>
@@ -78,30 +91,11 @@
           </table>
           <span>* IF the price of 1 Bitcoin reaches X, THEN your starting investment becomes X AND your profit becomes X.</span>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-          <nvd3-line-chart
-            data="bitcoinHistoricalData"
-            xAxisTickFormat="xAxisTickFormatFunction()"
-            height="350"
-            showXAxis="true"
-            showYAxis="true"
-            isArea="true"
-            useInteractiveGuideLine="true">
-          <svg></svg>
+        <div class="col-sm-5">
+          <br><br>
+          <img src="img/btc.png" width="200">
         </div>
       </div>
-
     </div>
-    <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-nvd3-directives/0.0.7/angularjs-nvd3-directives.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
