@@ -815,7 +815,7 @@ For more configuration options, check out the official [documentation](http://cm
 
 ## Conclusion
 
-Well, we accomplished a lot but, in actuality, really just scratched the surface of Angular. The framework has so much more to offer. Go back and review what you've learned thus far, and see if you can learn more by extending this application on your own. Start by looking at the [BitPay API](https://bitpay.com/api) to see what else you can implement. You could also break apart your controllers into two separate controllers and even abstract some of the logic out to [factories and services](http://mherman.org/blog/2014/06/12/primer-on-angularjs-service-types/#.VfbWXFNViko).
+Well, we accomplished a lot but, in actuality, really just scratched the surface of Angular. The framework has so much more to offer. Go back and review what you've learned thus far, and see if you can learn more by extending this application on your own. Start by looking at the [BitPay API](https://bitpay.com/api) to see what else you can implement. You could also break apart your controllers into two separate controllers and even abstract some of the logic out to [factories and services](http://mherman.org/blog/2014/06/12/primer-on-angularjs-service-types/#.VfbWXFNViko). Want more? Check out creating your own, reusable custom [directives](https://docs.angularjs.org/guide/directive)!
 
 Grab the final code from the [repo](https://github.com/mjhea0/thinkful-angular/tree/master/btc-calculator). Cheers!
 
