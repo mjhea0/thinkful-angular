@@ -564,7 +564,7 @@ input {
 }
 ```
 
-Then reference a link to the stylesheet in *index.js*, just below the Bootstrap CSS reference:
+Then reference a link to the stylesheet in *index.html*, just below the Bootstrap CSS reference:
 
 ```html
 <link rel="stylesheet" type="text/css" href="main.css">
@@ -705,7 +705,7 @@ Finally, update the HTML like so:
 
 Let's chart the historical Bitcoin rate, which we can download as a CSV from [CoinDesk](http://www.coindesk.com/price/). We need to convert this into JSON, but first let's get Angularjs-nvd3-directives installed.
 
-Add the following dependencies to your scripts in *index.js*, just below Angular:
+Add the following dependencies to your scripts in *index.html*, just below Angular:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
