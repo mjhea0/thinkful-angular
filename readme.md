@@ -308,9 +308,9 @@ Now, do some basic calculations in the module:
             $scope.currRate = data[i].rate;
           }
         }
-        $scope.initalAmt  = 5000;
-        $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initalAmt;}
-        $scope.profit     = function(price){return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;}
+        $scope.initialAmt  = 5000;
+        $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initialAmt;}
+        $scope.profit     = function(price){return price/$scope.currRate * $scope.initialAmt - $scope.initialAmt;}
       });
     });
 </script>
@@ -411,12 +411,12 @@ As you probably guessed, the [currency](http://docs.angularjs.org/api/ng/filter/
 ### Model
 
 ```html
-<input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
+<input type="number" ng-model="initialAmt" class="form-control" placeholder="{{initialAmt}}">
 ```
 
 Remember how [models](http://docs.angularjs.org/api/ng/directive/ngModel) work? Here we are binding a model called `InitialAmt` to the input form. This is a perfect example of two-way binding:
 
-1. If we update the model, we update the view with `placeholder="{{initalAmt}}"`.
+1. If we update the model, we update the view with `placeholder="{{initialAmt}}"`.
 1. We can also update the view (by entering a new value in the input box), so that it updates the model, making our app dynamic.
 
 It's circular: edit the model, and it updates the view; edit the view and it updates the model!
@@ -459,9 +459,9 @@ Finally, update the styles and HTML structure:
             $scope.currRate = data[i].rate;
           }
         }
-        $scope.initalAmt  = 5000;
-        $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initalAmt;}
-        $scope.profit     = function(price){return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;}
+        $scope.initialAmt  = 5000;
+        $scope.newAmt     = function(price){return price/$scope.currRate * $scope.initialAmt;}
+        $scope.profit     = function(price){return price/$scope.currRate * $scope.initialAmt - $scope.initialAmt;}
       });
     });
 </script>
@@ -474,7 +474,7 @@ Finally, update the styles and HTML structure:
           <br><br>
           <form role="form">
             <label for="starting-investment">Initial Investment (USD)</label>
-            <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
+            <input type="number" ng-model="initialAmt" class="form-control" placeholder="{{initialAmt}}">
           </form>
           <br>
           <p>Current Price (USD): <span class="number">{{currRate | currency }}</span></p>
@@ -586,12 +586,12 @@ var bitcoinCalculator = angular.module('bitcoinCalculator', []);
           $scope.currRate = data[i].rate;
         }
       }
-      $scope.initalAmt = 5000;
+      $scope.initialAmt = 5000;
       $scope.newAmt= function(price){
-        return price/$scope.currRate * $scope.initalAmt;
+        return price/$scope.currRate * $scope.initialAmt;
       };
       $scope.profit = function(price){
-        return price/$scope.currRate * $scope.initalAmt - $scope.initalAmt;
+        return price/$scope.currRate * $scope.initialAmt - $scope.initialAmt;
       };
     });
   });
@@ -637,7 +637,7 @@ Finally, update the HTML like so:
           <div class="col-sm-6">
             <form role="form">
               <label for="starting-investment">Initial Investment (USD)</label>
-              <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
+              <input type="number" ng-model="initialAmt" class="form-control" placeholder="{{initialAmt}}">
             </form>
             <br>
             <p>Current Price (USD): <span class="number">{{currRate | currency }}</span></p>
