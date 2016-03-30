@@ -783,7 +783,7 @@ $scope.bitcoinHistoricalData = [{
 }];
 ```
 
-Again, we're assigning data to a `$scope`. The actual values come from a variable called `values`; and the data for this can be found [here](https://github.com/mjhea0/thinkful-angular/tree/master/part4/prices.js). For now, go ahead and add this variable to the *main.js* file, just below the controller.
+Again, we're assigning data to a `$scope`. The actual values come from a variable called `values`; and the data for this can be found [here](https://github.com/mjhea0/thinkful-angular/blob/master/part5/prices.js). For now, go ahead and add this variable to the *main.js* file, just below the controller.
 
 The `xAxisTickFormatFunction` function formats the date correctly in the DOM.
 
